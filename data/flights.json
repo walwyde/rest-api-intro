@@ -1,37 +1,39 @@
 [
-  {
-    "destination": "canada",
-    "title": "flight to Canada",
-    "time": "1pm",
-    "price": 26000,
-    "date": "26-06-2022"
-  },
-  {
-    "destination": "Lagos",
-    "title": "flight to Lagos",
-    "time": "5am",
-    "price": 45000,
-    "date": "27-06-2022"
-  },
-  {
-    "destination": "lagos",
-    "title": "flight to Lagos",
-    "time": "5am",
-    "price": 45000,
-    "date": "27-06-2022"
-  },
-  {
-    "destination": "jos",
-    "title": "flight to Jos",
-    "time": "6am",
-    "price": 45000,
-    "date": "29-06-2022"
-  },
-  {
-    "destination": "abuja",
-    "title": "flight to Abuja",
-    "time": "3pm",
-    "price": 37000,
-    "date": "30-06-2022"
-  }
+  [
+    {
+      "destination": "canada",
+      "title": "flight to canada",
+      "time": "1pm",
+      "price": 26000,
+      "date": "26-06-2022"
+    },
+    {
+      "destination": "lagos",
+      "title": "flight to lagos",
+      "time": "5am",
+      "price": 45000,
+      "date": "26-06-2022"
+    },
+    {
+      "destination": "kano",
+      "title": "flight to kano",
+      "time": "7am",
+      "price": 30000,
+      "date": "27-06-2022"
+    },
+    {
+      "destination": "london",
+      "title": "flight to london",
+      "time": "4pm",
+      "price": 125000,
+      "date": "29-06-2022"
+    },
+    {
+      "destination": "benin",
+      "title": "flight to benin",
+      "time": "2pm",
+      "price": 25000,
+      "date": "29-06-2022"
+    }
+  ]
 ]

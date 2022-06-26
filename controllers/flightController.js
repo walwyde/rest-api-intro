@@ -66,21 +66,26 @@ exports.delete = (req, res) => {
   entry = req.params.destination
   console.log(entry)
   let flightArray = []
-  const buffer = []
+  let buffer = []
   fs.readFile(root, (err, fileContent) => {
 if (!err) {
   flightArray = JSON.parse(fileContent)
 
-   var deleted = flightArray.find(flight => flight.destination === entry)
-   console.log(deleted)
-   var index = flightArray.indexOf(deleted)
-   console.log(index)
-   flightArray.splice(index, 1)
-   var newArray = [...flightArray]
-   console.log(newArray)
-   buffer.push(newArray.object)
 }
-fs.writeFile(root, JSON.stringify(buffer), (err) => {
+var deleted = flightArray.find(flight => flight.destination === entry)
+//  console.log(deleted)
+var index = flightArray.indexOf(deleted)
+console.log(index)
+
+var newArray = flightArray.splice(index, 1) 
+  
+const p =  [...flightArray]
+
+console.log(p)
+
+ buffer.push(p)
+
+fs.writeFile(root, JSON.stringify(p), (err) => {
   if (err) {
     return res.json({"message": "an error occured"})
   }

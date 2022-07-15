@@ -16,7 +16,7 @@ exports.example = (req, res) => {
 };
 
 exports.postexample = (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   let destination = req.body.destination;
   let title = req.body.title;
   let time = req.body.time;
@@ -71,25 +71,26 @@ exports.delete = (req, res) => {
 if (!err) {
   flightArray = JSON.parse(fileContent)
 
-}
-var deleted = flightArray.find(flight => flight.destination === entry)
-//  console.log(deleted)
+  var deleted = flightArray.find(flight => flight.destination === entry)
+  console.log(deleted)
 var index = flightArray.indexOf(deleted)
 console.log(index)
+if (index !== -1) {
+  var newArray = flightArray.splice(index, 1) 
+  const p =  [...flightArray]
+  console.log(p)
+  buffer.push(p)
 
-var newArray = flightArray.splice(index, 1) 
-  
-const p =  [...flightArray]
+  fs.writeFile(root, JSON.stringify(p), (err) => {
+    if (err) {
+      return res.json({"message": "an error occured"})
+    }
+    return res.json({"message": "flight deleted"})
+  })
+} else {
+  return res.json({"mesage": "could not delete flight or flight not found"})
 
-console.log(p)
-
- buffer.push(p)
-
-fs.writeFile(root, JSON.stringify(p), (err) => {
-  if (err) {
-    return res.json({"message": "an error occured"})
-  }
-  return res.json({"message": "flight deleted"})
-})
+} 
+}
   })
 };

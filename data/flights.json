@@ -7,17 +7,31 @@
     "date": "26-06-2022"
   },
   {
-    "destination": "kano",
-    "title": "flight to kano",
-    "time": "7am",
-    "price": 30000,
-    "date": "27-06-2022"
-  },
-  {
     "destination": "benin",
     "title": "flight to benin",
     "time": "2pm",
     "price": 25000,
     "date": "29-06-2022"
+  },
+  {
+    "destination": "kano",
+    "title": "flight to kano",
+    "time": "3pm",
+    "price": 45000,
+    "date": "26-06-2022"
+  },
+  {
+    "destination": "jos",
+    "title": "flight to jos",
+    "time": "6am",
+    "price": 35000,
+    "date": "27-06-2022"
+  },
+  {
+    "destination": "teipei",
+    "title": "flight to teipei",
+    "time": "6am",
+    "price": 35000,
+    "date": "27-06-2022"
   }
 ]
